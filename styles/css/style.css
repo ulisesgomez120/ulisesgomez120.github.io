@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Merriweather", sans-serif;
+}
+
+body {
+  color: #3c4e6d;
+  background-color: #e8e8e8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 3.4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+}
+
+h5 {
+  font-size: 2.6rem;
+}
+
+h6 {
+  font-size: 2.1rem;
+}
+
+.name-container {
+  margin: 30px 22px 40px 22px;
+}
+
+.name-container,
+.about-me-section {
+  -webkit-animation: 1s fadein forwards;
+          animation: 1s fadein forwards;
+  opacity: 0;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 22px;
+  opacity: 0;
+  -webkit-animation: 1s fadeinGrow forwards;
+          animation: 1s fadeinGrow forwards;
+}
+
+.social-links li {
+  margin-bottom: 31px;
+  list-style: none;
+  width: 35px;
+  background-color: #3c4e6d;
+  text-align: center;
+  padding: 5px 0 2px 0;
+  border-radius: 50%;
+}
+
+.social-links li a {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .social-links {
+    top: 30px;
+    right: 22px;
+    bottom: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+  }
+  .social-links li {
+    margin: 0 0 0 31px;
+  }
+}
+
+@media (max-width: 400px) {
+  .social-links {
+    position: initial;
+    margin-bottom: 20px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .social-links li {
+    margin: 0;
+  }
+}
+
+@-webkit-keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+.about-me-section {
+  text-align: center;
+}
+
+.about-me-section p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  width: 75%;
+  margin: 20px auto;
+}
+
+em {
+  font-size: inherit;
+  color: #d34617;
+}
+
+.secondary {
+  color: #778eb6;
+}
+
+.section-divider-hr {
+  margin: 35px auto 40px auto;
+  border: 1.5px solid #c9c9c9;
+  width: 78%;
+}
+
+.projects-container {
+  width: 90%;
+  margin-left: 22px;
+}
+
+@-webkit-keyframes fadeinGrow {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.6) translateY(-12px);
+            transform: scale(0.6) translateY(-12px);
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeinGrow {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.6) translateY(-12px);
+            transform: scale(0.6) translateY(-12px);
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.project {
+  margin-bottom: 20px;
+  padding: 27px;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  opacity: 0;
+  -webkit-animation-name: fadeinGrow;
+          animation-name: fadeinGrow;
+  -webkit-animation-delay: calc(var(--animation-order) * 100ms);
+          animation-delay: calc(var(--animation-order) * 100ms);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@media (max-width: 390px) {
+  .project {
+    padding: 18px;
+  }
+}
+
+.project:nth-child(odd) {
+  background-color: #c9c9c9;
+}
+
+.project .project-name {
+  margin-bottom: 12px;
+}
+
+.project .demo-button {
+  text-decoration: none;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  background-color: #d34617;
+  margin-top: 1.2rem;
+  margin-right: 1.2rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.project .demo-button:hover {
+  background-color: #cb4214;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row .col-fig {
+  margin-right: 15px;
+}
+
+.row .col > h6 > .secondary {
+  font-size: inherit;
+}
+
+.row .project-info {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-top: 12px;
+}
+
+.row .project-info .youtubeLink {
+  letter-spacing: normal;
+  font-size: inherit;
+  text-decoration: none;
+  color: #377bf1;
+}
+
+@media (max-width: 720px) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .row .col {
+    margin-top: 12px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
